@@ -1,10 +1,10 @@
-package microservices.hr;
+package microservices.hrworker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StudyApplicationTests {
+class HrWorkerApplicationTests {
 
 	@Test
 	void contextLoads() {
