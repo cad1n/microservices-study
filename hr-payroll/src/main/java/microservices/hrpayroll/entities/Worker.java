@@ -11,7 +11,6 @@ public class Worker implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-
     private Long id;
 
     private String name;
@@ -19,7 +18,6 @@ public class Worker implements Serializable {
     private Double dailyIncome;
 
     public Worker() {
-
     }
 
     public Worker(Long id, String name, Double dailyIncome) {
