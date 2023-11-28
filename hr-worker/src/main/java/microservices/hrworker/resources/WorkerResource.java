@@ -4,7 +4,6 @@ import microservices.hrworker.entities.Worker;
 import microservices.hrworker.repositories.WorkerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +18,13 @@ import java.util.List;
 public class WorkerResource {
 
     private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
+    private final Environment env;
+    private final WorkerRepository repository;
 
-    @Autowired
-    private Environment env;
-
-    @Autowired
-    private WorkerRepository repository;
+    public WorkerResource(Environment env, WorkerRepository repository) {
+        this.env = env;
+        this.repository = repository;
+    }
 
     @GetMapping
     public ResponseEntity<List<Worker>> findAll() {
