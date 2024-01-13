@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping(value = "/workers")
 public class WorkerResource {
 
-    private static Logger logger = LoggerFactory.getLogger(WorkerResource.class);
+    private static final Logger logger = LoggerFactory.getLogger(WorkerResource.class);
     private final Environment env;
     private final WorkerRepository repository;
 
